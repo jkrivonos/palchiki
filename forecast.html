@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <title>Творческая Студия "Пальчики"</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/phonemask.js"></script>
+    <script src="https://use.fontawesome.com/661a533fef.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Пальчики"></a></div>
+    <ul class='menuInfo'>
+      <li class="menu"><a href="index.html">Главная</a></li>
+      <li class="menu"><a href="parties.html">Галерея</a></li>
+      <li class="menu"><a href="contacts.html">Контакты</a></li>
+      <li class="menu">Анонс</li>
+    </ul>
+  </div>
+  <div class="mainCircles">
+      <div class="forecast_block">
+      <div class="forecast_image"><img src="images/MK1.png"></div>
+      <ul class="forecast_list">
+        <li> 17 декабря</li>
+        <li> Лепка из глины</li>
+        <li>"Новогодний подсвечник"</li>
+        <li> Познакомимся с замечательным материалом - полимерной глиной и попробуем его в работе слепим из глины и соберём лепесток за лепестком новогодний цветок - пуансетию слепим ёлочный блестящий шарик
+          задекорируем подсвечник искусственными ягодами и еловыми веточками.
+          В результате каждый получит и заберёт с собой красивый подсвечник, который украсит интерьер или станет волшебным рождественским подарком.
+         </li>
+      </ul>
+    </div>
+    <div class="forecast_block">
+    <div class="forecast_image"><img src="images/MK2.png"></div>
+    <ul class="forecast_list">
+      <li> 19 декабря</li>
+      <li> Лепка из глины</li>
+      <li> "Новогодний набор"</li>
+      <li> На уроке слепим с вами Дедушку Мороза🎅🏻 и снеговика☃️ из полимерной глины.
+        Наши изделия украсят чайную ложку и вилку🍴, которые мы упакуем в праздничную упаковку.</li>
+    </ul>
+  </div>
+  <div class="forecast_block">
+    <div class="forecast_image"><img src="images/MK3.png"></div>
+    <ul class="forecast_list">
+      <li>23 декабря</li>
+      <li>Декорирование</li>
+      <li>"Баночка со сладостями"</li>
+      <li>Приглашаем деток в возрасте от 5 лет в субботу 9 декабря в 15:30
+        На МК мы слепим и сладости из глины и украсим этими вкусняшками баночку, в которой можно хранить сахар, конфетки или разные приятные мелочи🍬🎀🍭💍
+        Возможно участие вместе с мамой от 3 лет.
+        Продолжительность 1,5 часа.</li>
+    </ul>
+  </div>
+    <i class="fa fa-plus" aria-hidden="true"></i> // значок плюса
+  </div>
+  <div class="phone"><img src="images/phone_green.png"></div>
+
+  <div class="callback hidden">
+    <i class="fa fa-window-close"></i>
+    <h4 style="color:darkolivegreen">Остались вопросы? <br> Мы перезвоним Вам!</h4>
+    <form action="contact-form.php" method='post'>
+      <p>
+        <label class="label" for="name">Ваше имя</label>
+        <input class="input" type="text" name="name" pattern="^[А-Яа-яЁё\s]+$"] placeholder="Введите ваше имя" required/>
+      </p>
+      <p>
+        <label class="label" for="tel">Номер телефона</label><br><label class="label"></label>
+        <span>+7</span><input type="tel" name="tel"  id="phone" pattern="^((8|\+7)[\- ]?)?[\-]?)?[\d\- ]{7,10}$" class="input telplace" placeholder="Введите номер без +7">
+      </p>
+
+      <p>
+        <label class="label" for="email">Ваш email</label>
+        <input class="input" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="email" placeholder="Введите ваш email" required/>
+      </p>
+      <p>
+        <label class="label" for="message">Текст сообщения:</label>
+        <textarea class="input textarea" name="message" rows="15"></textarea>
+      </p>
+      <input type="submit" value="Отправить">
+    </form>
+  </div>
+
+</div>
+<script src="js/callback.js"></script>
+  <script src="js/ajax_min.js"></script>
+  <!--<script src="js/ajax.js"></script>-->
+</body>
+</html>
