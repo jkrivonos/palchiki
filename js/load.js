@@ -1,10 +1,7 @@
 'use strict';
-// Файл load.js
 (function () {
-  window.load = function (url, successHandler, errorHandler) {
+  window.load = function (formData, url, successHandler, errorHandler) {
     var xhr = new XMLHttpRequest(); // объявляем объект для запроса на сервер
-
-    xhr.responseType = 'json';
 
     xhr.addEventListener('load', function () {
       if (xhr.status === 200) {
@@ -24,25 +21,8 @@
 
     xhr.timeout = 10000; // 10s
 
-    xhr.open('GET', url);
-    xhr.send();
-  }
+    xhr.open('POST', url);
+    xhr.send(formData);
+  };
 })();
 
-// Файл main.js
-'use strict';
-(function () {
-  var errorHandler = function (message) {
-    console.error(message);
-  };
-
-  var successHandler = function (data) {
-    console.log(data);
-  };
-
-  window.load('https://up.htmlacademy.ru/assets/javascript/demo/8-xhr/unknownfile.json', successHandler, errorHandler);
-
-  window.load('https://up.htmlacademy.ru/assets/javascript/demo/8-xhr/data.json', successHandler, errorHandler);
-
-  window.load('https://api.github.com/user', successHandler, errorHandler);
-})();
