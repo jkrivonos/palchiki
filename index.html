@@ -34,14 +34,14 @@
       <div id="alarm"></div>
       <h4 style="color:darkolivegreen">Остались вопросы? <br> Мы перезвоним Вам!</h4>
 
-      <form action="feedback.php" method="post">
+      <form action="" method="post">
         <p>
           <label class="label" for="name">Ваше имя</label>
-          <input class="input" type="text" name="name" pattern="^[А-Яа-яЁё\s]+$"] placeholder="Введите ваше имя" required/>
+          <input class="input" type="text" name="name" pattern="^[А-Яа-яЁё\s]+$"] placeholder="Введите ваше имя"/>
         </p>
         <p>
           <label class="label" for="tel">Номер телефона</label><br><label class="label"></label>
-          <span>+7</span><input type="tel" name="tel"  id="phone" pattern="^((8|\+7)[\- ]?)?[\-]?)?[\d\- ]{7,10}$" class="input telplace" placeholder="Введите номер без +7">
+          <span>+7</span><input type="tel" name="tel"  id="phone" pattern="^((8|\+7)[\- ]?)?[\-]?)?[\d\- ]{7,10}$" class="input telplace" placeholder="Введите номер без +7" required />
         </p>
 
         <p>
@@ -52,6 +52,7 @@
           <label class="label" for="message">Текст сообщения:</label>
           <textarea class="input textarea" name="message" rows="10"></textarea>
         </p>
+        <input name="bezspama" type="text" style="display:none" value="" />
         <input id="btn" type="submit" value="Отправить">
       </form>
     </div>
