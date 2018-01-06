@@ -296,3 +296,6 @@ h2{
 li {
   list-style-type: none; /* Убираем маркеры */
 }
+#alarm{
+  border: dashed 2px orangered;
+}

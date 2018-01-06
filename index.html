@@ -31,8 +31,10 @@
 
     <div class="callback hidden">
       <i class="fa fa-window-close"></i>
+      <div id="alarm"></div>
       <h4 style="color:darkolivegreen">Остались вопросы? <br> Мы перезвоним Вам!</h4>
-      <form action="contact-form.php" method='post'>
+
+      <form action="feedback.php" method="post">
         <p>
           <label class="label" for="name">Ваше имя</label>
           <input class="input" type="text" name="name" pattern="^[А-Яа-яЁё\s]+$"] placeholder="Введите ваше имя" required/>
@@ -48,9 +50,9 @@
         </p>
         <p>
           <label class="label" for="message">Текст сообщения:</label>
-          <textarea class="input textarea" name="message" rows="15"></textarea>
+          <textarea class="input textarea" name="message" rows="10"></textarea>
         </p>
-        <input type="submit" value="Отправить">
+        <input id="btn" type="submit" value="Отправить">
       </form>
     </div>
     <template id="similarCircleTemplate"> <!---шаблон для клонирования--->
@@ -61,6 +63,7 @@
   </div>
   <script src="js/js.js"></script>
   <script src="js/photoviewer.js"></script>
+  <script src="js/load.js"></script>
   <script src="js/callback.js"></script>
 </body>
 
