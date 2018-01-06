@@ -32,7 +32,7 @@ body {
   width: auto;
   margin: 0 auto;
   padding: 0px;
-  border: solid indianred 2px;
+  /*border: solid indianred 2px;*/
   position: relative;
   padding-left:20px;
 }
@@ -57,7 +57,7 @@ body {
 .mainCircles {
   width: 70%;
   margin: 0 auto;
-  border: solid 2px yellow;
+  /*border: solid 2px yellow;*/
 }
 .gallery{
   width:70%;
@@ -205,7 +205,7 @@ bottom: 50px;
 .fa-window-close:hover{
   color: #9f141e;
 }
-input[type="submit"]{
+.callback input[type="submit"]{
   padding: 10px 10px;
   color: #1b9f31;
   background: linear-gradient(to bottom, rgba(27, 159, 49, 0.1) 40%, rgba(27, 159, 49, 0.5));
@@ -216,7 +216,7 @@ input[type="submit"]{
   margin-bottom: 10px;
   margin-top: 10px;
 }
-input[type="submit"]:hover{
+.callback input[type="submit"]:hover{
   background-color: #fffb37;
   cursor: pointer;
 }
@@ -298,4 +298,22 @@ li {
 }
 #alarm{
   border: dashed 2px orangered;
+}
+.enter{
+  width:20%;
+  padding: 20px;
+}
+.btnEnter{
+  width:95%;
+  border-radius: 5px;
+  color:white;
+  background-color: rgba(27, 159, 49, 1);
+  padding: 5px;
+  margin-top: 5px;
+}
+.btnEnter:hover{
+  background-color: rgba(27, 159, 49, 0.8);
+}
+p{
+  color: #692088;
 }
