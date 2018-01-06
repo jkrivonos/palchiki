@@ -10,7 +10,9 @@ class AdminController
 {
     public function actionIndex() {
         $this->checkAuthentication();
-        echo 'actionIndex';
+        $events = Event::getEvents();
+        require_once(ROOT.'/views/index.php');
+
         return true;
     }
 
@@ -22,11 +24,13 @@ class AdminController
 
     public function actionUpdate($id) {
         $this->checkAuthentication();
+        echo 'update';
         return true;
     }
 
     public function actionDelete($id) {
         $this->checkAuthentication();
+        echo 'delete';
         return true;
     }
 
