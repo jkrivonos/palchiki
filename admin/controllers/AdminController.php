@@ -18,7 +18,48 @@ class AdminController
 
     public function actionCreate() {
         $this->checkAuthentication();
-        echo 'actionCreate';
+        $masterName = '';
+        $description = '';
+        $date = '';
+        $coast = '';
+
+        if(isset($_POST['button'])) {
+            $errors = false;
+            if(!empty($_POST['master_name'])) {
+                $masterName = htmlspecialchars(trim($_POST['master_name']));
+            } else {
+                $errors[] = 'Введите название мастер-класса!';
+            }
+
+            if(!empty($_POST['description'])) {
+                $description = htmlspecialchars(trim($_POST['description']));;
+            } else {
+                $errors[] = 'Введите описание мастер-класса!';
+            }
+
+            if(!empty($_POST['date'])) {
+                $date = htmlspecialchars(trim($_POST['date']));;
+            } else {
+                $errors[] = 'Введите дату проведения мастер-класса!';
+            }
+
+            if(!empty($_POST['coast'])) {
+                $coast = htmlspecialchars(trim($_POST['coast']));;
+            } else {
+                $errors[] = 'Укажите стоимость мастер-класса!';
+            }
+
+            if($errors == false) {
+                $id = Event::createEvent($masterName, $description, $date, $coast);
+                if ($id) {
+                    header('Location: /admin/');
+                } else {
+                    $errors[] = 'Внутренняя ошибка, попробуйте еще раз!';
+                }
+            }
+        }
+
+        require_once(ROOT.'/views/create.php');
         return true;
     }
 
@@ -64,7 +105,7 @@ class AdminController
         return true;
     }
 
-    public function checkAuthentication()
+    private function checkAuthentication()
     {
         if (!Admin::isAdminAuthenticated()) {
             header("Location: /admin/auth");

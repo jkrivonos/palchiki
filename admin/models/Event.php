@@ -11,4 +11,9 @@ class Event
     public static function getEvents() {
         return EventDao::getActualEvents();
     }
+
+    public static function createEvent($masterName, $description, $date, $coast) {
+        return EventDao::createEvent($masterName, $description, $date, $coast);
+    }
+
 }
