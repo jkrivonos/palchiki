@@ -317,3 +317,14 @@ li {
 p{
   color: #692088;
 }
+.adminPanel{
+  display:flex;
+  flex-direction:column;
+  width:30%;
+  padding: 10px;
+}
+.adminPanel input{
+  margin-top: 10px;
+  margin-bottom:20px;
+  outline: none;
+}
