@@ -320,11 +320,17 @@ p{
 .adminPanel{
   display:flex;
   flex-direction:column;
-  width:30%;
+  width:90%;
   padding: 10px;
+  margin: auto;
 }
 .adminPanel input{
   margin-top: 10px;
   margin-bottom:20px;
   outline: none;
+}
+.admin{
+  width: 50%;
+  justify-content: center;
+  margin: auto;
 }

@@ -7,6 +7,18 @@
   <title>Творческая Студия "Пальчики"</title>
 </head>
 <body>
+<div class="container">
+  <div class="header">
+    <div class="logo"><img src="images/logo.png" alt="Пальчики">
+    </div>
+    <ul class='menuInfo'>
+      <li class="menu"><a href="index.html">Главная</a></li>
+      <li class="menu"><a href="parties.html">Галерея</a></li>
+      <li class="menu"><a href="contacts.html">Контакты</a></li>
+      <li class="menu"><a href="forecast.html">Анонс</a></li>
+    </ul>
+  </div>
+
 
     <form class="adminPanel" action="feedback.php" enctype="multipart/form-data" method="post">
 
@@ -17,7 +29,7 @@
       <input type="text" class="input" maxlength="200" name="title" placeholder="Название мастер-класса">
 
       <label  for="description">Описание</label>
-      <textarea class="input textarea" name="description" rows="15"></textarea>
+      <textarea class="input textarea" name="description" rows="10"></textarea>
 
       <label  for="name">Дата и время МК</label>
       <input type="datetime-local" class="input" maxlength="25"   name="email" placeholder="Дата и время МК">
@@ -29,10 +41,11 @@
       <input type="file" class="input" name="photo" multiple accept="image/*,image/jpeg">
 
 
-      <input type="submit" class="btnEnter" value="Все ОК, добавляем на сайт">
+      <input type="submit" class="btnEnter admin" value="Все ОК, добавляем на сайт">
+
     </form>
 
 
-
+</div>>
 </body>
 </html>
