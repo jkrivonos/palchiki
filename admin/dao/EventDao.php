@@ -43,4 +43,17 @@ class EventDao
             return 0;
         }
     }
+
+    public static function getMasterClassById($id) {
+        $query = "SELECT id, master_name, description, DATE_FORMAT(event_date, '%d.%m.%Y %H:%i') date, coast FROM master_events WHERE id = :id";
+        $conn = Db::getConnection();
+        $result = $conn->prepare($query);
+
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        $result->execute();
+
+        return $result->fetch();
+    }
 }

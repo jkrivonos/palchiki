@@ -16,4 +16,8 @@ class Event
         return EventDao::createEvent($masterName, $description, $date, $coast);
     }
 
+    public static function getMasterClassById($id) {
+        return EventDao::getMasterClassById($id);
+    }
+
 }
