@@ -95,8 +95,8 @@ class AdminController
             }
 
             if($errors == false) {
-                $id = Event::createEvent($masterName, $description, $date, $coast);
-                if ($id) {
+                $isUpdated = Event::updateEvent($id, $masterName, $description, $date, $coast);
+                if ($isUpdated) {
                     header('Location: /admin/');
                 } else {
                     $errors[] = 'Внутренняя ошибка, попробуйте еще раз!';
