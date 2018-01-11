@@ -29,9 +29,6 @@
     <form class="adminPanel" action="" enctype="multipart/form-data" method="POST">
         <p style="text-align: center">Редактировать</p>
 
-        <label  for="title">ID</label>
-        <input type="text" class="input" name="$id" value="<?php echo $masterClass['id']; ?>" readonly required>
-
         <label  for="title">Название мастер-класса</label>
         <input type="text" class="input" name="master_name" placeholder="Название мастер-класса" value="<?php echo $masterClass['master_name']; ?>" maxlength="200" required>
 

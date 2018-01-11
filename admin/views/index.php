@@ -30,7 +30,6 @@
     <div class="allTable">
         <div class="justTable">
             <div class="tableTitle">
-                <div>ID</div>
                 <div>Название МК</div>
                 <div>Описание</div>
                 <div>Дата и время МК</div>
@@ -39,7 +38,6 @@
             </div>
             <?php foreach ($events as $event): ?>
             <div class="tableContent">
-                <div><?php echo $event['id']; ?></div>
                 <div><?php echo $event['master_name']; ?></div>
                 <div><?php echo $event['description']; ?></div>
                 <div><?php echo $event['date']; ?></div>
