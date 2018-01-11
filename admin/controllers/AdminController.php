@@ -109,7 +109,26 @@ class AdminController
 
     public function actionDelete($id) {
         $this->checkAuthentication();
-        echo 'delete';
+
+        if (isset($_POST['notsubmit'])) {
+            header('Location: /admin/');
+        }
+
+        $masterClass = Event::getMasterNameAndDateById($id);
+        $masterName = $masterClass['master_name'];
+        $date = $masterClass['date'];
+
+        if (isset($_POST['submit'])) {
+            $errors = false;
+            $isUpdated = Event::setIsDeleted($id);
+            if ($isUpdated) {
+                header('Location: /admin/');
+            } else {
+                $errors[] = 'Внутренняя ошибка, попробуйте еще раз!';
+            }
+        }
+
+        require_once(ROOT.'/views/delete.php');
         return true;
     }
 

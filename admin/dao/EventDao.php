@@ -62,8 +62,35 @@ class EventDao
         }
     }
 
+    public static function setIsDeleted($id){
+        $query = "UPDATE master_events SET is_deleted = '1' WHERE  id = :id";
+        $conn = Db::getConnection();
+        $result = $conn->prepare($query);
+
+        $result->bindParam(':id', $id, PDO::PARAM_STR);
+
+        if($result->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static function getMasterClassById($id) {
         $query = "SELECT id, master_name, description, DATE_FORMAT(event_date, '%d.%m.%Y %H:%i') date, coast FROM master_events WHERE id = :id";
+        $conn = Db::getConnection();
+        $result = $conn->prepare($query);
+
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        $result->execute();
+
+        return $result->fetch();
+    }
+
+    public static function getMasterNameAndDateById($id) {
+        $query = "SELECT master_name, DATE_FORMAT(event_date, '%d.%m.%Y %H:%i') date FROM master_events WHERE id = :id";
         $conn = Db::getConnection();
         $result = $conn->prepare($query);
 

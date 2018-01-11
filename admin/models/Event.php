@@ -24,8 +24,16 @@ class Event
         return $eventData;
     }
 
+    public static function getMasterNameAndDateById($id) {
+        return EventDao::getMasterNameAndDateById($id);
+    }
+
     public static function updateEvent($id, $masterName, $description, $date, $coast) {
         return EventDao::updateEvent($id, $masterName, $description, $date, $coast);
+    }
+
+    public static function setIsDeleted($id) {
+        return EventDao::setIsDeleted($id);
     }
 
 }
