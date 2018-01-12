@@ -10,8 +10,8 @@
   <script src="https://use.fontawesome.com/661a533fef.js"></script>
 </head>
 <body>
-<div id="similarPhotoesList"></div> <!---сюда клонируем увеличенные фотки--->
-  <div class="wrapper">
+<div class="bigPhoto" id="similarPhotoesList"></div> <!---сюда клонируем увеличенные фотки--->
+<div class="wrapper">
       <div class="container">
         <div class="header">
           <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Пальчики"></a></div>
@@ -22,21 +22,28 @@
             <li><a href="forecast.html">Анонс</a></li>
           </ul>
         </div>
+
         <template id="similarPhotoTemplate">
-          <div class="image"><img class="img" src="images/photoes/1.jpg"></div> <!--клонируем превьюшки (шаблон)-->
+          <div class="image"><img src="images/photoes/1.jpg" style="width: 100%; margin: auto;"></div> <!--клонируем превьюшки (шаблон)-->
         </template>
 
         <template id="photoesTemplate">
-          <div class="bigPic"><img class="cloneImg" src="images/photoes/1.jpg" style="width:450px"></div><!---клонируем увеличенные фотки (шаблон)--->
+          <div class="bigPic"><img class="cloneImg" src="images/photoes/1.jpg" style="width:100%"></div><!---клонируем увеличенные фотки (шаблон)--->
         </template>
         <br>
 
         <div class="gallery">
-          <div id="setup-similar-list"><!--сюда клонируем похожих фото-превьюшек--></div>
+          <div class="galleryInner" id="setup-similar-list"><!--сюда клонируем похожих фото-превьюшек--></div>
         </div>
       </div>
     <div class="phone"><img src="images/phone_green.png"></div>
 
+
+
+
+
+
+    ///////////////////////////////////////////////
     <div class="callback hidden">
       <i class="fa fa-window-close"></i>
       <h4 style="color:darkolivegreen">Остались вопросы? <br> Мы перезвоним Вам!</h4>

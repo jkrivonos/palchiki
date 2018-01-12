@@ -62,25 +62,22 @@ body {
   /*border: solid 2px yellow;*/
 }
 .gallery{
-  width:70%;
-  margin: 0 auto;
-  clear: both;
+  width:90%;
+  display: flex;
+  margin: auto;
+  /*background-color: #5eb1ff;*/
   }
 
 .image {
-  display: inline-block;
-  width: 25%;
-  margin: 35px;
-  padding: 0px;
-  vertical-align: middle;
-}
+  width: 30%;
+  /*background-color: #1b9f31;*/
+  padding: 15px;
+
+  }
 
 .image:hover{
   transform: scale(1.2);
   transition: all 1s ease-out;
-}
-.img{
-  width: 100%;
 }
 #similar-circle-list, #similar-circle-list-second {
   /*border: dashed black 2px;*/
@@ -89,21 +86,26 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .hidden {
   display: none;
 }
 .wrapper {
   margin: 0px;
   padding: 0px;
-  /*border: solid 1px red;*/
+  border: solid 1px red;
 }
 .bigPic{
+  width: 30%;
   position: fixed;
-  top:10%;
-  left:40%;
-  margin-left:-150px;
-  z-index: 1;
+  left: 30%;
+  top:5%;
+  z-index:1;
+  /*background-color: #9f141e;*/
+  margin: auto;
+}
+.bigPhoto{
+  display: flex;
+  flex-direction: column;
 }
 a:hover {
   color: #1b9f31;
@@ -112,6 +114,7 @@ a:hover {
 .menuInfo a {
   text-decoration: none;
 }
+
 .menuInfo{
   display: flex;
   flex-direction: row;
@@ -121,12 +124,6 @@ a:hover {
   flex-wrap: wrap;
   /*background-color: #ee72db;*/
 }
-
-/*.iconMenu{*/
-  /*width: auto;*/
-  /*position: absolute;*/
-  /*background-color: #3eeeb9;*/
- /*}*/
 .map{
   width:95%;
 }
@@ -390,4 +387,11 @@ width: 20%;
 .mainCircles h3{
   font-size: 25px;
   font-weight: 100;
+}
+.galleryInner{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
 }
