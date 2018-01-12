@@ -65,13 +65,70 @@ class AdminController
 
     public function actionUpdate($id) {
         $this->checkAuthentication();
-        echo 'update';
+
+        $masterClass = Event::getMasterClassById($id);
+
+        if(isset($_POST['button'])) {
+            $errors = false;
+            if(!empty($_POST['master_name'])) {
+                $masterName = htmlspecialchars(trim($_POST['master_name']));
+            } else {
+                $errors[] = 'Введите название мастер-класса!';
+            }
+
+            if(!empty($_POST['description'])) {
+                $description = htmlspecialchars(trim($_POST['description']));;
+            } else {
+                $errors[] = 'Введите описание мастер-класса!';
+            }
+
+            if(!empty($_POST['date'])) {
+                $date = htmlspecialchars(trim($_POST['date']));;
+            } else {
+                $errors[] = 'Введите дату проведения мастер-класса!';
+            }
+
+            if(!empty($_POST['coast'])) {
+                $coast = htmlspecialchars(trim($_POST['coast']));;
+            } else {
+                $errors[] = 'Укажите стоимость мастер-класса!';
+            }
+
+            if($errors == false) {
+                $isUpdated = Event::updateEvent($id, $masterName, $description, $date, $coast);
+                if ($isUpdated) {
+                    header('Location: /admin/');
+                } else {
+                    $errors[] = 'Внутренняя ошибка, попробуйте еще раз!';
+                }
+            }
+        }
+        require_once(ROOT.'/views/update.php');
         return true;
     }
 
     public function actionDelete($id) {
         $this->checkAuthentication();
-        echo 'delete';
+
+        if (isset($_POST['notsubmit'])) {
+            header('Location: /admin/');
+        }
+
+        $masterClass = Event::getMasterNameAndDateById($id);
+        $masterName = $masterClass['master_name'];
+        $date = $masterClass['date'];
+
+        if (isset($_POST['submit'])) {
+            $errors = false;
+            $isUpdated = Event::setIsDeleted($id);
+            if ($isUpdated) {
+                header('Location: /admin/');
+            } else {
+                $errors[] = 'Внутренняя ошибка, попробуйте еще раз!';
+            }
+        }
+
+        require_once(ROOT.'/views/delete.php');
         return true;
     }
 
