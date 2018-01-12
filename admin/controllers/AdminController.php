@@ -66,7 +66,10 @@ class AdminController
     public function actionUpdate($id) {
         $this->checkAuthentication();
 
-        $masterClass = Event::getMasterClassById($id);
+        $masterName = '';
+        $description = '';
+        $date = '';
+        $coast = '';
 
         if(isset($_POST['button'])) {
             $errors = false;
@@ -102,7 +105,15 @@ class AdminController
                     $errors[] = 'Внутренняя ошибка, попробуйте еще раз!';
                 }
             }
+        } else {
+            $masterClass = Event::getMasterClassById($id);
+            $masterName = $masterClass['master_name'];
+            $description = $masterClass['description'];
+            $date = $masterClass['date'];
+            $coast = $masterClass['coast'];
         }
+
+
         require_once(ROOT.'/views/update.php');
         return true;
     }
