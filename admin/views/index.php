@@ -1,30 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Admin
- * Date: 07.01.2018
- * Time: 0:43
- */
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <script src="https://use.fontawesome.com/661a533fef.js"></script>
-    <title>Творческая Студия "Пальчики"</title>
-</head>
-<body>
-<div class="header">
-    <div class="logo"><a href="/index.html"><img src="/images/logo.png" alt="Пальчики"></a></div>
-    <ul class='menuInfo'>
-        <li><a href="/index.html">Главная</a></li>
-        <li><a href="/parties.html">Галерея</a></li>
-        <li><a href="/contacts.html">Контакты</a></li>
-        <li><a href="/forecast.html">Анонс</a></li>
-    </ul>
-</div>
+<?php include ROOT.'/views/header.php'; ?>
+
 <p style="text-align: center">Список предстоящих мастер классов</p>
 <div class="flexTable">
     <div class="allTable">
@@ -53,6 +28,7 @@
     <form action="/admin/create/" method="post">
         <input type="submit" name="submit" class="btnEnter admin" value="Добавить новый МК">
     </form>
+</div><script src="https://use.fontawesome.com/661a533fef.js"></script>
 </div>
 </body>
 </html>
