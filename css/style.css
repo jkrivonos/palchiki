@@ -381,3 +381,13 @@ border
   margin-right: 20px;
   margin-left: 20px;
 }
+.fa{
+  margin-right: 15px;
+}
+.buttonDelete{
+width: 20%;
+}
+.mainCircles h3{
+  font-size: 25px;
+  font-weight: 100;
+}
