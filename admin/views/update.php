@@ -24,7 +24,8 @@
         <input type="text" class="input" name="coast" placeholder="Стоимость" value="<?php echo $coast; ?>" pattern="[0-9]{1,3}" required>
 
         <label for="file">Загрузка фото</label>
-        <input type="file" class="input" name="photo" multiple accept="image/*,image/jpeg">
+        <img src="<?php echo $imagePath; ?>" width="200"/>
+        <input type="file" class="input" name="image">
 
         <input type="submit" name="button" class="btnEnter admin" value="Сохранить изменения">
     </form>
