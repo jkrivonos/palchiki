@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" media="(min-width:481px)">
+  <link rel="stylesheet" href="css/style_small.css" media="(max-width:480px)">
   <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <!--<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">-->
   <title>Творческая Студия "Пальчики"</title>
@@ -22,12 +23,12 @@
         <li><a href="forecast.html">Анонс</a></li>
       </ul>
     </div>
-
-    <div class="mainCircles">
-      <div id="similar-circle-list"><!--Список похожих кругов меню--></div>
+    <div class="phoneCircles">
+      <div class="mainCircles">
+        <div id="similar-circle-list"><!--Список похожих кругов меню--></div>
+      </div>
+      <div class="phone"><img src="images/phone_green.png"></div>
     </div>
-    <div class="phone"><img src="images/phone_green.png"></div>
-
     <div class="callback hidden">
       <i class="fa fa-window-close"></i>
       <div id="alarm"></div>
@@ -55,12 +56,13 @@
         <input id="btn" type="submit" value="Отправить">
       </form>
     </div>
-    <template id="similarCircleTemplate"> <!---шаблон для клонирования--->
-      <div class="circleOut changeText">
-        <div class="circleIn similar-circle"></div>
       </div>
-    </template>
-  </div>
+  <template id="similarCircleTemplate"> <!---шаблон для клонирования--->
+    <div class="circleOut changeText">
+      <div class="circleIn similar-circle"></div>
+    </div>
+  </template>
+
   <script src="js/js.js"></script>
   <script src="js/photoviewer.js"></script>
   <script src="js/load.js"></script>
