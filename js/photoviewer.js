@@ -11,6 +11,7 @@
     for (var i = 0; i < LINKS.length; i++) {
       var photoElement = photoShowTemplate.cloneNode(true);// клонируем шаблон превьюшек
       photoElement.querySelector('img').src = LINKS[i]; // находим элемент с тегом img и вставляем ему ссылки из массива фотографий
+      photoElement.querySelector('div').id = i + 1;// присваиваем id с 1
       fragment.appendChild(photoElement);
     }
     similarListElement.appendChild(fragment);// закончили клонировать фотки
@@ -26,6 +27,9 @@
     var photoTemplateElement = document.querySelector('#photoesTemplate').content.querySelector('.bigPic'); // обращаемся к образцу, который хотим клонировать
     var photoBigElement = photoTemplateElement.cloneNode(true);// клонируем шаблон
     photoBigElement.querySelector('.cloneImg').src = evt.currentTarget.querySelector('img').src; // меняем src
+    photoBigElement.setAttribute('currentid', evt.currentTarget.id);
+    photoBigElement.addEventListener('click', bigPicClickHandler);
+
     fragmentBig.appendChild(photoBigElement);
     similarPhotoElement.appendChild(fragmentBig);
     document.addEventListener('keydown', escPressHandler);
@@ -47,4 +51,23 @@
   for (var j = 0; j < LINKS.length; j++) {
     bigImage[j].addEventListener('click', photoClickHandler);
   }
+
+  function bigPicClickHandler(evt) {
+    var bigElement = evt.currentTarget;
+    var currentID = bigElement.getAttribute('currentid');
+    if (currentID == LINKS.length) {
+      currentID = 1;
+    } else {
+      currentID++;
+    }
+
+    bigElement.querySelector('.cloneImg').src = LINKS[currentID - 1];
+    bigElement.setAttribute('currentid', currentID);
+
+
+  }
+
+  // var bigClone = document.querySelector('#similarPhotoesList');
+  // bigClone.addEventListener('click', bigPicClickHandler);
+
 })();
