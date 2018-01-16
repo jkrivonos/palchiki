@@ -36,4 +36,17 @@ class Event
         return EventDao::setIsDeleted($id);
     }
 
+    public static function getImage($id) {
+        $defaultImage = 'default.jpg';
+        $path = '/upload/mk/';
+
+        $pathToImage = $path.$id.'.jpg';
+
+        if (file_exists($_SERVER['DOCUMENT_ROOT'].$pathToImage)) {
+            return $pathToImage;
+        }
+
+        return $path.$defaultImage;
+    }
+
 }

@@ -52,6 +52,9 @@ class AdminController
             if($errors == false) {
                 $id = Event::createEvent($masterName, $description, $date, $coast);
                 if ($id) {
+                    if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+                        move_uploaded_file($_FILES['image']['tmp_name'], $_SERVER['DOCUMENT_ROOT']."/upload/mk/$id.jpg");
+                    }
                     header('Location: /admin/');
                 } else {
                     $errors[] = 'Внутренняя ошибка, попробуйте еще раз!';
@@ -66,7 +69,11 @@ class AdminController
     public function actionUpdate($id) {
         $this->checkAuthentication();
 
-        $masterClass = Event::getMasterClassById($id);
+        $masterName = '';
+        $description = '';
+        $date = '';
+        $coast = '';
+        $imagePath = Event::getImage($id);
 
         if(isset($_POST['button'])) {
             $errors = false;
@@ -97,12 +104,23 @@ class AdminController
             if($errors == false) {
                 $isUpdated = Event::updateEvent($id, $masterName, $description, $date, $coast);
                 if ($isUpdated) {
+                    if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+                        move_uploaded_file($_FILES['image']['tmp_name'], $_SERVER['DOCUMENT_ROOT']."/upload/mk/$id.jpg");
+                    }
                     header('Location: /admin/');
                 } else {
                     $errors[] = 'Внутренняя ошибка, попробуйте еще раз!';
                 }
             }
+        } else {
+            $masterClass = Event::getMasterClassById($id);
+            $masterName = $masterClass['master_name'];
+            $description = $masterClass['description'];
+            $date = $masterClass['date'];
+            $coast = $masterClass['coast'];
         }
+
+
         require_once(ROOT.'/views/update.php');
         return true;
     }
