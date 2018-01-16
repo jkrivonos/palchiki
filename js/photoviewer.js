@@ -23,22 +23,34 @@
       bigPic.remove();
     }
     wrapperElement.style.opacity = 0.3;
+    closeBtn.classList.remove('visibility');
+    prevBtn.classList.remove('visibility');
+    // prevBtn.addEventListener('click', prevBtnClickHandler); // обработчик на кнопку предыдущий слайд
+    //   function prevBtnClickHandler(evt) {
+    //     alert('1');
+    //   }
+    nextBtn.classList.remove('visibility');
     var fragmentBig = document.createDocumentFragment();
     var photoTemplateElement = document.querySelector('#photoesTemplate').content.querySelector('.bigPic'); // обращаемся к образцу, который хотим клонировать
     var photoBigElement = photoTemplateElement.cloneNode(true);// клонируем шаблон
     photoBigElement.querySelector('.cloneImg').src = evt.currentTarget.querySelector('img').src; // меняем src
     photoBigElement.setAttribute('currentid', evt.currentTarget.id);
     photoBigElement.addEventListener('click', bigPicClickHandler);
-
     fragmentBig.appendChild(photoBigElement);
+    wrapperElement.setAttribute('overflow','hidden');
     similarPhotoElement.appendChild(fragmentBig);
+
     document.addEventListener('keydown', escPressHandler);
   }
 
   function escPressHandler(evt) {
-    if (evt.keyCode === ESC_KEY) {
+    if (evt.keyCode !== ESC_KEY){
+    } else {
       similarPhotoElement.querySelector('.bigPic').remove();
       wrapperElement.style.opacity = 1;
+      closeBtn.classList.add('visibility');
+      prevBtn.classList.add('visibility');
+      nextBtn.classList.add('visibility');
       document.removeEventListener('keydown', escPressHandler);
     }
   }
@@ -46,6 +58,10 @@
   renderPhotoes();
 
   var wrapperElement = document.querySelector('.wrapper'); // обращаемся к wrapper, на котором создаем прозрачность
+  var closeBtn = document.querySelector('.fa-window-close');// обращаемся к кнопке закрывания на большой фотке
+  var prevBtn = document.querySelector('.prevBtn');
+  var nextBtn = document.querySelector('.nextBtn');
+
   var similarPhotoElement = document.querySelector('#similarPhotoesList'); // сюда все будет склонировано
   var bigImage = document.querySelectorAll('.image');
   for (var j = 0; j < LINKS.length; j++) {
@@ -60,14 +76,7 @@
     } else {
       currentID++;
     }
-
     bigElement.querySelector('.cloneImg').src = LINKS[currentID - 1];
     bigElement.setAttribute('currentid', currentID);
-
-
   }
-
-  // var bigClone = document.querySelector('#similarPhotoesList');
-  // bigClone.addEventListener('click', bigPicClickHandler);
-
 })();

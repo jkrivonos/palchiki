@@ -21,6 +21,7 @@
 
   function sendFormHandler(evt) {
     evt.preventDefault();
+    evt.preventDefault();
 
     var formElement = document.querySelector('.callback form');
     var formData = new FormData(formElement);
