@@ -18,27 +18,23 @@
   }
 
   function photoClickHandler(evt) {
-    var bigPic = similarPhotoElement.querySelector('.bigPic');
-    if (bigPic) {
-      bigPic.remove();
-    }
     wrapperElement.style.opacity = 0.3;
     closeBtn.classList.remove('visibility');
     prevBtn.classList.remove('visibility');
     nextBtn.classList.remove('visibility');
-
-    nextBtn.addEventListener('click', nextBtnClickHandler); // обработчик на кнопку след слайд
-    prevBtn.addEventListener('click', prevBtnClickHandler); // обработчик на кнопку предыдущий слайд
-    closeBtn.addEventListener('click', closeBtnClickHandler);
-
     var fragmentBig = document.createDocumentFragment();
+
     var photoTemplateElement = document.querySelector('#photoesTemplate').content.querySelector('.bigPic'); // обращаемся к образцу, который хотим клонировать
     var photoBigElement = photoTemplateElement.cloneNode(true);// клонируем шаблон
     photoBigElement.querySelector('.cloneImg').src = evt.currentTarget.querySelector('img').src; // меняем src
     photoBigElement.setAttribute('currentid', evt.currentTarget.id);
     fragmentBig.appendChild(photoBigElement);
     similarPhotoElement.appendChild(fragmentBig);
+
     document.addEventListener('keydown', escPressHandler);
+    nextBtn.addEventListener('click', nextBtnClickHandler); // обработчик на кнопку след слайд
+    prevBtn.addEventListener('click', prevBtnClickHandler); // обработчик на кнопку предыдущий слайд
+    closeBtn.addEventListener('click', closeBtnClickHandler);
   }
 
   function escPressHandler(evt) {
@@ -55,7 +51,7 @@
   renderPhotoes();
 
   var wrapperElement = document.querySelector('.wrapper'); // обращаемся к wrapper, на котором создаем прозрачность
-  var closeBtn = document.querySelector('.fa-window-close');// обращаемся к кнопке закрывания на большой фотке
+  var closeBtn = document.querySelector('.closeBtn');// обращаемся к кнопке закрывания на большой фотке
   var prevBtn = document.querySelector('.prevBtn');
   var nextBtn = document.querySelector('.nextBtn');
 

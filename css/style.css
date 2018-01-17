@@ -193,7 +193,7 @@
     flex-direction: column;
     /*border: dashed;*/
     width:5%;
-    /*position: fixed;*/
+    position: fixed;
     right: 25px;
     bottom: 50px;
     margin-right: 10px;
@@ -228,16 +228,17 @@
     /*margin: 5px 25px 10px 80px;*/
     padding: 0px 20px;
   }
-  .fa-window-close{
+  .closeBtn{
     position: fixed;
-    right: 0px;
-    top: 0px;
-    color: dimgrey;
-    z-index: 2;
-    opacity: 0.5;
+    right: 24%;
+    top: 1%;
+    color: #738ABA;
+    z-index: 3;
+    cursor: pointer;
   }
-  .fa-window-close:hover{
-    opacity: 1;
+  .closeBtn:hover{
+
+    color: white;
   }
   .prevBtn,
   .nextBtn{
@@ -251,15 +252,16 @@
     height: 100%;
     z-index: 2;
   }
-
+}
   .prevBtn{
     left:5%;
   }
   .nextBtn{
     right: 5%;
   }
-  .fa-chevron-left, .fa-chevron-right {
+  .fa-hand-o-left, .fa-hand-o-right {
   margin: auto;
+    color: white;
   }
   .callback input[type="submit"]{
     padding: 10px 10px;
