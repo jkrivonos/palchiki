@@ -15,7 +15,7 @@
 <div class="bigPhoto" id="similarPhotoesList"></div> <!---сюда клонируем увеличенные фотки--->
 <i class="fa fa-window-close visibility"></i> <!---кнопка  close для увеличенной фотки-->
 <div class="prevBtn visibility"><i class="fa fa-chevron-left"></i></div> <!---кнопки прокрутки фото влево и вправо--->
-<div class="nextBtn"><i class="fa fa-chevron-right"></i></div>
+<div class="nextBtn visibility"><i class="fa fa-chevron-right"></i></div>
 <div class="wrapper">
       <div class="container">
         <div class="header">
@@ -29,7 +29,7 @@
         </div>
         <br>
         <div class="gallery">
-          <div class="galleryInner" id="setup-similar-list"><!--сюда клонируем похожих фото-превьюшек--></div>
+          <div class="galleryInner" id="setup-similar-list"><!--сюда клонируем фото-превьюшек--></div>
         </div>
       </div>
     <div class="phone"><img src="images/phone_green.png"></div>
@@ -59,10 +59,10 @@
     </div>
   </div>
 <template id="similarPhotoTemplate">
-  <div class="image"><img src="images/photoes/1.jpg" style="width: 100%; margin: auto;"></div> <!--клонируем превьюшки (шаблон)-->
+  <div class="image"><img src="images/photoes/1.jpg" style="width: 100%; margin: auto; border-radius: 2%;"></div> <!--клонируем превьюшки (шаблон)-->
 </template>
 <template id="photoesTemplate">
-  <div class="bigPic"><img class="cloneImg fade" src="images/photoes/1.jpg" style="width:60%"></div><!---клонируем увеличенные фотки (шаблон)--->
+  <div class="bigPic"><img class="cloneImg fade" src="images/photoes/1.jpg" style="width:60%; border-radius: 2%;"></div><!---клонируем увеличенные фотки (шаблон)--->
 </template>
   <script src="js/js.js"></script>
   <script src="js/photoviewer.js"></script>

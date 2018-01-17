@@ -11,8 +11,6 @@
       font-size: 24px;
       color: black;
       height: 100%;
-
-
   }
   /*вращающиеся круги-меню:*/
   .circleOut:hover{
@@ -77,11 +75,10 @@
     }
 
   .image {
-    width: 30%;
+    width: 25%;
     /*background-color: #1b9f31;*/
     padding: 15px;
-
-    }
+        }
 
   .image:hover{
     transform: scale(1.2);
@@ -114,9 +111,10 @@
     margin: auto;
     z-index:1;
     left:25%;
-    background-image: url('../images/4-fon-dlya-sayta.png');
+    background-color: #6d84b4;
     margin-top: 25px;
     cursor: pointer;
+    z-index: 1;
     }
   .cloneImg{
     margin: auto;
@@ -236,26 +234,32 @@
   }
   .prevBtn,
   .nextBtn{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     color: dimgrey;
     cursor: pointer;
-    /*border: dashed;*/
+    border: dashed;
+    min-width: 686px;
+    min-height: 725px;
+    z-index: 2;
   }
   .prevBtn:hover,
   .nextBtn:hover {
   background-color: rgba(0,0,0,0.8);
-  }
+      }
 
   }
   .prevBtn{
-    left:20%;
-    top:40%;
+    left:5%;
   }
   .nextBtn{
-    right: 20%;
-    top:40%;
+    right: 5%;
   }
+.fa-chevron-left, .fa-chevron-right {
+  margin: auto;
 
+}
   .callback input[type="submit"]{
     padding: 10px 10px;
     color: #1b9f31;
@@ -453,9 +457,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width:70%;
+    justify-content: space-around;
     align-items: center;
-  }
+    padding:55px;
+    margin: auto;
+      }
   .phoneCircles{
     display: flex;
     flex-direction:row;

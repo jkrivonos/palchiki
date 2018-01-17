@@ -25,17 +25,21 @@
     wrapperElement.style.opacity = 0.3;
     closeBtn.classList.remove('visibility');
     prevBtn.classList.remove('visibility');
-    // prevBtn.addEventListener('click', prevBtnClickHandler); // обработчик на кнопку предыдущий слайд
-    //   function prevBtnClickHandler(evt) {
-    //     alert('1');
-    //   }
+    prevBtn.addEventListener('click', prevBtnClickHandler); // обработчик на кнопку предыдущий слайд
+    function prevBtnClickHandler() {
+      alert('назад');
+    }
     nextBtn.classList.remove('visibility');
+    nextBtn.addEventListener('click', bigPicClickHandler); // обработчик на кнопку след слайд
+    // function nextBtnClickHandler() {
+    //   alert('вперед');
+    // }
     var fragmentBig = document.createDocumentFragment();
     var photoTemplateElement = document.querySelector('#photoesTemplate').content.querySelector('.bigPic'); // обращаемся к образцу, который хотим клонировать
     var photoBigElement = photoTemplateElement.cloneNode(true);// клонируем шаблон
     photoBigElement.querySelector('.cloneImg').src = evt.currentTarget.querySelector('img').src; // меняем src
     photoBigElement.setAttribute('currentid', evt.currentTarget.id);
-    photoBigElement.addEventListener('click', bigPicClickHandler);
+    photoBigElement.addEventListener('click', bigPicClickHandler); // при клике по увеличенной фотографии работает слайдер
     fragmentBig.appendChild(photoBigElement);
     wrapperElement.setAttribute('overflow','hidden');
     similarPhotoElement.appendChild(fragmentBig);
@@ -44,7 +48,7 @@
   }
 
   function escPressHandler(evt) {
-    if (evt.keyCode !== ESC_KEY){
+    if (evt.keyCode !== ESC_KEY) {
     } else {
       similarPhotoElement.querySelector('.bigPic').remove();
       wrapperElement.style.opacity = 1;
@@ -69,14 +73,24 @@
   }
 
   function bigPicClickHandler(evt) {
+    debugger;
     var bigElement = evt.currentTarget;
+    debugger;
     var currentID = bigElement.getAttribute('currentid');
+    debugger;
     if (currentID == LINKS.length) {
+      debugger;
       currentID = 1;
     } else {
+      debugger;
+
       currentID++;
     }
+    debugger;
     bigElement.querySelector('.cloneImg').src = LINKS[currentID - 1];
+
+    debugger;
     bigElement.setAttribute('currentid', currentID);
+    debugger;
   }
 })();
