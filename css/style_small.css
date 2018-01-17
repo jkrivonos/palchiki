@@ -55,14 +55,14 @@
     width: 20%;
     flex-direction: column;
     float: left;
-    background-color: #1b9f31;
+    /*background-color: #1b9f31;*/
     display: none;
     z-index: 2;
   }
 
   .logo {
     width: 35%;
-    border: solid 2px black;
+    /*border: solid 2px black;*/
     display: none;
   }
 
@@ -117,7 +117,7 @@
     flex-direction: row;
     margin: 0px;
     padding: 0px;
-    border: solid 1px red;
+    /*border: solid 1px red;*/
   }
 
   .bigPic {
@@ -146,13 +146,13 @@
   }
   .menuInfo a {
     text-decoration: none;
-    background-color: #ff3150;
+    /*background-color: #ff3150;*/
   }
   .menuInfo {
     display: flex;
     flex-direction: column;
     width: 20%;
-   background-color: #ee72db;
+   /*background-color: #ee72db;*/
     padding-left:5px;
   }
   .shortMenu{
@@ -168,7 +168,7 @@
   }
   .contactInfo{
     width:20%;
-    background-color: #9f141e;
+    /*background-color: #9f141e;*/
     display: inline-block;
     position: absolute;
     float: left;
@@ -180,7 +180,7 @@
     font-size: medium;
     text-align: center;
     vertical-align: middle;
-    background-color: #3eeeb9;
+    /*background-color: #3eeeb9;*/
   }
 
   .phone {
@@ -308,7 +308,7 @@
   }
 
   .forecast_block {
-    background-color: #1b9f31;
+    /*background-color: #1b9f31;*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -332,7 +332,7 @@
   .forecast_list {
     width: 75%;
     float: left;
-    background-color: #5eb1ff;
+    /*background-color: #5eb1ff;*/
     padding: 0px;
   }
 

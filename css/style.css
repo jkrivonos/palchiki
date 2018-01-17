@@ -275,7 +275,7 @@
   .callback input[type="submit"]:hover{
     background-color: #fffb37;
     cursor: pointer;
-  }
+    }
   .label{
     font-size:16px;
     font-family: 'Lobster', cursive;
@@ -283,7 +283,7 @@
     padding-bottom: 5px;
     float: left;
     width: 100%;
-  }
+    }
   .input{
     display: inline-block;
     float: left;

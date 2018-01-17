@@ -25,10 +25,12 @@
     wrapperElement.style.opacity = 0.3;
     closeBtn.classList.remove('visibility');
     prevBtn.classList.remove('visibility');
-    prevBtn.addEventListener('click', prevBtnClickHandler); // обработчик на кнопку предыдущий слайд
     nextBtn.classList.remove('visibility');
+
     nextBtn.addEventListener('click', nextBtnClickHandler); // обработчик на кнопку след слайд
+    prevBtn.addEventListener('click', prevBtnClickHandler); // обработчик на кнопку предыдущий слайд
     closeBtn.addEventListener('click', closeBtnClickHandler);
+
     var fragmentBig = document.createDocumentFragment();
     var photoTemplateElement = document.querySelector('#photoesTemplate').content.querySelector('.bigPic'); // обращаемся к образцу, который хотим клонировать
     var photoBigElement = photoTemplateElement.cloneNode(true);// клонируем шаблон
@@ -40,8 +42,7 @@
   }
 
   function escPressHandler(evt) {
-    if (evt.keyCode !== ESC_KEY) {
-    } else {
+    if (evt.keyCode === ESC_KEY) {
       similarPhotoElement.querySelector('.bigPic').remove();
       wrapperElement.style.opacity = 1;
       closeBtn.classList.add('visibility');
@@ -63,6 +64,7 @@
   for (var j = 0; j < LINKS.length; j++) {
     bigImage[j].addEventListener('click', photoClickHandler);
   }
+
   function nextBtnClickHandler() { // прокрутка фотографий вправо
     var bigPic = similarPhotoElement.querySelector('.bigPic');
     var currentID = bigPic.getAttribute('currentid');
@@ -74,12 +76,10 @@
     bigPic.querySelector('.cloneImg').src = LINKS[currentID - 1];
     bigPic.setAttribute('currentid', currentID);
   }
+
   function prevBtnClickHandler() { // прокрутка фотографий влево
     var bigPic = similarPhotoElement.querySelector('.bigPic');
     var currentID = bigPic.getAttribute('currentid');
-    if (currentID == LINKS.length) {
-      currentID = LINKS.length;
-    }
     if (currentID == 1) {
       currentID = LINKS.length;
     } else {
@@ -88,12 +88,12 @@
     bigPic.querySelector('.cloneImg').src = LINKS[currentID - 1];
     bigPic.setAttribute('currentid', currentID);
   }
-  function closeBtnClickHandler(){
+
+  function closeBtnClickHandler() {
     similarPhotoElement.querySelector('.bigPic').remove();
     wrapperElement.style.opacity = 1;
     closeBtn.classList.add('visibility');
     prevBtn.classList.add('visibility');
     nextBtn.classList.add('visibility');
   }
-
 })();

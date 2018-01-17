@@ -58,7 +58,8 @@
   shortMenu.addEventListener('click', shortMenuClickHandler);
   function shortMenuClickHandler() {
     var header = document.querySelector('.header');
-    header.style = 'display: block';
+    header.style = 'display: block; position: absolute';
+    // header.style = 'position: absolute';
     var shortMenu = document.querySelector('.shortMenu');
     shortMenu.style = 'display: none';
   }
