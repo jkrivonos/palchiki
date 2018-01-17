@@ -52,17 +52,18 @@
   }
 
   .header {
-    width: 30%;
-    display:flex;
+    width: 20%;
     flex-direction: column;
     float: left;
     background-color: #1b9f31;
-
+    display: none;
+    z-index: 2;
   }
 
   .logo {
     width: 35%;
     border: solid 2px black;
+    display: none;
   }
 
   .logo img {
@@ -143,20 +144,21 @@
     color: #9f121d;
     text-decoration: none;
   }
-
   .menuInfo a {
     text-decoration: none;
-
+    background-color: #ff3150;
   }
-
   .menuInfo {
     display: flex;
     flex-direction: column;
-
     width: 20%;
    background-color: #ee72db;
+    padding-left:5px;
   }
-
+  .shortMenu{
+    display: block;
+    position: absolute;
+}
   .map{
     display: flex;
     margin: auto;

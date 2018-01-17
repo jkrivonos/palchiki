@@ -54,5 +54,13 @@
     circles[i].addEventListener('mouseout', outCircleMouse);
     circles[i].addEventListener('click', clickCircleMouse);
   }
+  var shortMenu = document.querySelector('.shortMenu');
+  shortMenu.addEventListener('click', shortMenuClickHandler);
+  function shortMenuClickHandler() {
+    var header = document.querySelector('.header');
+    header.style = 'display: block';
+    var shortMenu = document.querySelector('.shortMenu');
+    shortMenu.style = 'display: none';
+  }
 })();
 
