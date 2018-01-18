@@ -58,10 +58,15 @@
   shortMenu.addEventListener('click', shortMenuClickHandler);
   function shortMenuClickHandler() {
     var header = document.querySelector('.header');
-    header.style = 'display: block; position: absolute';
-    // header.style = 'position: absolute';
+    header.style = 'display: block; position: absolute; background-color:lightgrey; border-radius:2%';
+
     var shortMenu = document.querySelector('.shortMenu');
-    shortMenu.style = 'display: none';
+    shortMenu.addEventListener('click', closeShortMenuClickHandler);
+    function closeShortMenuClickHandler() {
+      header.style = 'display: none';
+    }
   }
+
+  shortMenu.removeEventListener('click', closeShortMenuClickHandler);
 })();
 

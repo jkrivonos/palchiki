@@ -160,6 +160,7 @@
   .shortMenu{
     position: absolute;
     display: none;
+    width: 150%;
   }
   .map{
     display: flex;

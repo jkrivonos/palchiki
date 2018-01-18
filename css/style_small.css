@@ -53,13 +53,12 @@
 
   .header {
     width: 20%;
-    flex-direction: column;
-    float: left;
     /*background-color: #1b9f31;*/
     display: none;
     z-index: 2;
-  }
-
+    top:5%;
+    left: 0;
+    }
   .logo {
     width: 35%;
     /*border: solid 2px black;*/
@@ -156,9 +155,16 @@
     padding-left:5px;
   }
   .shortMenu{
-    display: block;
     position: absolute;
+    /*background-color: #fd8d32;*/
+    width: 15%;
+    left: 0;
+    top:0;
 }
+  .shortMenu img{
+    width: 100%;
+
+  }
   .map{
     display: flex;
     margin: auto;
