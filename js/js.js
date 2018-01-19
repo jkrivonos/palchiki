@@ -43,10 +43,11 @@
     }
   }
 
-  var similarCircleElement = document.querySelector('#similar-circle-list'); // обращаемся к элементу, в котором будут все склонированные копии
+
+
   var circleTemplate = document.querySelector('#similarCircleTemplate').content; // тег(шаблон), который мы хотим клонировать
-  // клонируем кружки меню
-  cloneCircles();
+  var similarCircleElement = document.querySelector('#similar-circle-list'); // обращаемся к элементу, в котором будут все склонированные копии
+  cloneCircles(); // клонируем кружки меню
 
   var circles = document.querySelectorAll('.circleOut');
   for (var i = 0; i < circles.length; i++) {
@@ -54,19 +55,7 @@
     circles[i].addEventListener('mouseout', outCircleMouse);
     circles[i].addEventListener('click', clickCircleMouse);
   }
-  var shortMenu = document.querySelector('.shortMenu');
-  shortMenu.addEventListener('click', shortMenuClickHandler);
-  function shortMenuClickHandler() {
-    var header = document.querySelector('.header');
-    header.style = 'display: block; position: absolute; background-color:lightgrey; border-radius:2%';
 
-    var shortMenu = document.querySelector('.shortMenu');
-    shortMenu.addEventListener('click', closeShortMenuClickHandler);
-    function closeShortMenuClickHandler() {
-      header.style = 'display: none';
-    }
-  }
 
-  shortMenu.removeEventListener('click', closeShortMenuClickHandler);
 })();
 

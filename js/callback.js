@@ -39,7 +39,7 @@
   var callbackFormElement = document.querySelector('.callback');
   iconPhoneElement.addEventListener('click', phoneIconHandler); // кликаем по значку телтрубки и вызываем колбэк
 
-  var closeIconElement = document.querySelector('.fa');
+  var closeIconElement = document.querySelector('.fa-window-close');
   closeIconElement.addEventListener('click', closeIconHandler);
 
   var alarmElement = document.querySelector('#alarm');
