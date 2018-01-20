@@ -64,8 +64,6 @@
     flex-direction: column;
     width:70%;
     margin:auto;
-    /*border: solid 2px yellow;*/
-    /*background-color: #c9ffc5;*/
   }
   .gallery{
     width:90%;
@@ -262,7 +260,6 @@
   }
   .nextBtn{
     right: 8%;
-    border: dashed;
   }
   .fa-hand-o-left, .fa-hand-o-right {
     margin: auto;
@@ -298,14 +295,17 @@
     margin-bottom: 10px;
     background-color: rgba(255,255,255,0.7);
     border: grey;
-    border-radius:5px;
+    border-radius:5%;
     padding: 5px;
     font-family: 'Lobster', cursive;
-  }
+    }
   .input:focus{
     background-color: white;
     outline: none;
     border:none;
+  }
+  .shortInput{
+    width:10%;
   }
   .telplace{
     display: inline-block;
@@ -380,11 +380,15 @@
     /*border: dashed 2px orangered;*/
   }
   .enter{
+    position: absolute;
+    left:40%;
+    top:30%;
     width:20%;
     padding: 20px;
+    border-radius: 3%;
   }
   .btnEnter{
-    width:95%;
+    width:82.5%;
     border-radius: 5px;
     color:white;
     background-color: rgba(27, 159, 49, 1);
@@ -413,12 +417,19 @@
   .admin{
     width: 20%;
     justify-content: center;
-    margin-top:20px ;
+    margin-top:20px;
   }
+  .adminDelete{
+    width: 90%;
+    justify-content: center;
+    margin-top:20px;
+  }
+
   .tableTitle{
     justify-content: space-around;
     display: flex;
     flex-direction: row;
+    padding-bottom: 10px;
   }
   .tableTitle div:last-child{
     flex:0.6;
@@ -427,6 +438,7 @@
     justify-content: space-around;
     display: flex;
     flex-direction: row;
+    font-size: large;
   }
   .tableContent div:last-child{
     flex:0.6;
@@ -467,6 +479,10 @@
   .fa-pencil{
     margin-right: 20px;
     margin-left: 20px;
+    color: #7e03ff;
+  }
+  .fa-trash-o{
+    color: #7e03ff;
   }
   .buttonDelete{
   width: 20%;
