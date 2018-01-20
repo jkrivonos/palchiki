@@ -82,7 +82,7 @@
     width: 90%;
     display: flex;
     margin: auto;
-    background-color: #5eb1ff;
+    /*background-color: #5eb1ff;*/
   }
 
   .image {
@@ -121,20 +121,18 @@
     top:15%;
     margin: auto;
     z-index: 1;
-    background-color: #fd8d32;
+    /*background-color: #fd8d32;*/
   }
 
   .cloneImg {
     width: 100%;
 
-    background-color: #70c050;
-    border: solid;
+    /*background-color: #70c050;*/
+    /*border: solid;*/
   }
 
   .bigPhoto {
     display: flex;
-    /*background-color: #ee72db;*/
-    border: solid;
   }
 
   a:hover {
@@ -322,6 +320,9 @@
     outline: none;
     border: none;
   }
+  .shortInput{
+    width:10%;
+  }
 
   .telplace {
     display: inline-block;
@@ -381,14 +382,18 @@
   }
 
     .enter {
-    width: 20%;
-    padding: 20px;
+      position: absolute;
+      left:40%;
+      top:30%;
+      width:20%;
+      padding: 20px;
+      border-radius: 3%;
   }
 
   .btnEnter {
-    width: 95%;
+    width:82.5%;
     border-radius: 5px;
-    color: white;
+    color:white;
     background-color: rgba(27, 159, 49, 1);
     padding: 5px;
     margin-top: 5px;
@@ -420,13 +425,19 @@
   .admin {
     width: 20%;
     justify-content: center;
-    margin-top: 20px;
+    margin-top:20px;
+  }
+  .adminDelete{
+    width: 90%;
+    justify-content: center;
+    margin-top:20px;
   }
 
   .tableTitle {
     justify-content: space-around;
     display: flex;
     flex-direction: row;
+    padding-bottom: 10px;
   }
 
   .tableTitle div:last-child {
@@ -437,6 +448,7 @@
     justify-content: space-around;
     display: flex;
     flex-direction: row;
+    font-size: large;
   }
 
   .tableContent div:last-child {
@@ -484,10 +496,10 @@
   .fa-pencil {
     margin-right: 20px;
     margin-left: 20px;
+    color: #7e03ff;
   }
-
-  .fa {
-    margin-right: 15px;
+  .fa-trash-o{
+    color: #7e03ff;
   }
 
   .buttonDelete {
