@@ -14,9 +14,34 @@
 <div class="closeBtn visibility"><i class="fa fa-times" aria-hidden="true"></i></div> <!---кнопка  close для увеличенной фотки-->
 <div class="prevBtn visibility"><i class="fa fa-hand-o-left" aria-hidden="true"></i></div> <!---кнопки прокрутки фото влево и вправо--->
 <div class="nextBtn visibility"><i class="fa fa-hand-o-right" aria-hidden="true"></i></i></div>
+<div><img class="phone" src="images/phone_green.png"></div>
+<div class="callback hidden">
+  <i class="fa fa-window-close"></i>
+  <h4 style="color:darkolivegreen">Остались вопросы? <br> Мы перезвоним Вам!</h4>
+  <form action="contact-form.php" method='post'>
+    <p>
+      <label class="label">Ваше имя</label>
+      <input class="input" type="text" name="name" pattern="^[А-Яа-яЁё\s]+$"] placeholder="Введите ваше имя" required/>
+    </p>
+    <p>
+      <label class="label">Номер телефона</label><br><label class="label"></label>
+      <span>+7</span><input type="tel" name="tel"  id="phone" pattern="^((8|\+7)[\- ]?)?[\-]?)?[\d\- ]{7,10}$" class="input telplace" placeholder="Введите номер без +7">
+    </p>
+
+    <p>
+      <label class="label"Ваш email</label>
+      <input class="input" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="email" placeholder="Введите ваш email" required/>
+    </p>
+    <p>
+      <label class="label">Текст сообщения:</label>
+      <textarea class="input textarea" name="message" rows="15"></textarea>
+    </p>
+    <input type="submit" value="Отправить">
+  </form>
+</div>
 <div class="wrapper">
       <div class="container">
-        <div class="shortMenu"><img src="images/shortMenu.png"></div>
+        <div class="shortMenu"><img src="images/menu_.png"></div>
         <div class="header">
           <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Пальчики"></a></div>
           <ul class='menuInfo'>
@@ -31,35 +56,7 @@
           <div class="galleryInner" id="setup-similar-list"><!--сюда клонируем фото-превьюшек--></div>
         </div>
       </div>
-    <div><img class="phone" src="images/phone_green.png"></div>
-  <div class="callback hidden">
-    <i class="fa fa-window-close"></i>
-    <div id="alarm"></div>
-    <h4 style="color:darkolivegreen">Остались вопросы? <br> Мы перезвоним Вам!</h4>
-
-    <form action="" method="post">
-      <p>
-        <label class="label">Ваше имя</label>
-        <input class="input" type="text" name="name" pattern="^[А-Яа-яЁё\s]+$"] placeholder="Введите ваше имя"/>
-      </p>
-      <p>
-        <label class="label">Номер телефона</label><br><label class="label"></label>
-        <span>+7</span><input type="tel" name="tel"  id="phone" pattern="^((8|\+7)[\- ]?)?[\-]?)?[\d\- ]{7,10}$" class="input telplace" placeholder="Введите номер без +7" required />
-      </p>
-
-      <p>
-        <label class="label">Ваш email</label>
-        <input class="input" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="email" placeholder="Введите ваш email" required/>
-      </p>
-      <p>
-        <label class="label">Текст сообщения:</label>
-        <textarea class="input textarea" name="message" rows="10"></textarea>
-      </p>
-      <input name="bezspama" type="text" style="display:none" value="" />
-      <input id="btn" type="submit" value="Отправить">
-    </form>
-  </div>
-  </div>
+      </div>
 <template id="similarPhotoTemplate">
   <div class="image"><img src="images/photoes/1.jpg" style="width: 100%; margin: auto; border-radius: 2%;"></div> <!--клонируем превьюшки (шаблон)-->
 </template>
