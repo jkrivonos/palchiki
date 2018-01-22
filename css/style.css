@@ -130,11 +130,11 @@
     animation-duration: 1.5s;
   }
   @-webkit-keyframes fade {
-    from {opacity: .4}
+    from {opacity: 0}
     to {opacity: 1}
   }
   @keyframes fade{
-    from {opacity: .4}
+    from {opacity: 0}
     to {opacity: 1}
   }
 
@@ -147,6 +147,10 @@
   }
 
   .menuInfo{
+    animation-name: fade;
+    animation-duration: 3s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
     display: flex;
     flex-direction: row;
     width: 70%;
@@ -196,6 +200,12 @@
     margin-right: 10px;
     align-self: flex-end;
     z-index: 2;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;;
+    -webkit-animation-iteration-count: infinite;
   }
 
   .phone img{
@@ -262,7 +272,7 @@
   }
   .nextBtn{
     right: 8%;
-    border: dashed;
+    /*border: dashed;*/
   }
   .fa-hand-o-left, .fa-hand-o-right {
     margin: auto;

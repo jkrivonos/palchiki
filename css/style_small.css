@@ -56,6 +56,8 @@
   .header {
     animation-name: fadeIn;
     animation-duration: 1s;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
     width: 20%;
     /*background-color: #1b9f31;*/
     display: none;
