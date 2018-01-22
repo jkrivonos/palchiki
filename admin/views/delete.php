@@ -17,7 +17,7 @@ if (isset($errors) && is_array($errors)) {
 
 <?php include ROOT.'/views/header.php'; ?>
 
-    <div class="mainCircles">
+    <div class="mainCircles adminDelete">
         <h3>Вы действительно хотите удалить МК: <span><?php echo $masterName.' '.$date?></span> ?</h3>
         <form method="POST">
             <button name="submit" class="btnEnter buttonDelete"><i class="fa fa-trash-o" aria-hidden="true"></i>Удалить</button>
