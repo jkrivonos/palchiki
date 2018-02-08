@@ -14,7 +14,7 @@ $SUBJECT = 'Сообщение с сайта palchiki';
  */
 function createMessage(): string
 {
-    $email = htmlspecialchars(trim($_POST["eeemail"]));
+    $email = htmlspecialchars(trim($_POST["email"]));
     $tel = htmlspecialchars(trim($_POST["tel"]));
     $message = htmlspecialchars(trim($_POST["message"]));
     $name = htmlspecialchars(trim($_POST["name"]));
