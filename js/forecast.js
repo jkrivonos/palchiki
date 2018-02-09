@@ -24,21 +24,26 @@
       image: 'images/MK3.png'
     }];
 
-  function cloneMeeting() {
+  var successHandler = function (message) {
+    var meetings = JSON.parse(message);
+    var meetingTemplate = document.querySelector('#meetingTemplate').content; // шаблон, который мы хотим клонировать
     var fragment = document.createDocumentFragment();
 
-    for (var i = 0; i < MEETINGS.length; i++) {
+    for (var i = 0; i < meetings.length; i++) {
       var meetingElement = meetingTemplate.cloneNode(true);// клонируем шаблон (встречи)
-      meetingElement.querySelector('#lineFirst').textContent = MEETINGS[i].name;
-      meetingElement.querySelector('#lineSecond').textContent = MEETINGS[i].date;
-      meetingElement.querySelector('#lineThird').textContent = MEETINGS[i].coast;
-      meetingElement.querySelector('#lineFourth').textContent = MEETINGS[i].description;
-      meetingElement.querySelector('.forecast_image img').src = MEETINGS[i].image;
+      meetingElement.querySelector('#lineFirst').textContent = meetings[i].name;
+      meetingElement.querySelector('#lineSecond').textContent = meetings[i].date;
+      meetingElement.querySelector('#lineThird').textContent = meetings[i].coast;
+      meetingElement.querySelector('#lineFourth').textContent = meetings[i].description;
+      meetingElement.querySelector('.forecast_image img').src = meetings[i].image;
       fragment.appendChild(meetingElement);
     }
     document.querySelector('#meetingList').appendChild(fragment);
-  }
+  };
 
-  var meetingTemplate = document.querySelector('#meetingTemplate').content; // шаблон, который мы хотим клонировать
-  cloneMeeting();
+  var errorHandler = function () {
+    document.querySelector('#error').innerHTML = 'Непредвиденная внутренняя ошибка. Обратитесь к разработчику :)';
+  };
+
+  window.load('', 'php.php', successHandler, errorHandler);
 })();
