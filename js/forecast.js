@@ -36,10 +36,9 @@
       meetingElement.querySelector('.forecast_image img').src = MEETINGS[i].image;
       fragment.appendChild(meetingElement);
     }
-    similarMeetingElement.appendChild(fragment);
+    document.querySelector('#meetingList').appendChild(fragment);
   }
 
   var meetingTemplate = document.querySelector('#meetingTemplate').content; // шаблон, который мы хотим клонировать
-  var similarMeetingElement = document.querySelector('#meetingList'); // элемент, в котором будут все склонированные копии
   cloneMeeting();
 })();

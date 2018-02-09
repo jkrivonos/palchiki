@@ -30,20 +30,20 @@
     <h4 style="color:darkolivegreen">Остались вопросы? <br> Мы перезвоним Вам!</h4>
     <form action="contact-form.php" method='post'>
       <p>
-        <label class="label" for="name">Ваше имя</label>
+        <label class="label">Ваше имя</label>
         <input class="input" type="text" name="name" pattern="^[А-Яа-яЁё\s]+$"] placeholder="Введите ваше имя" required/>
       </p>
       <p>
-        <label class="label" for="tel">Номер телефона</label><br><label class="label"></label>
+        <label class="label">Номер телефона</label><br><label class="label"></label>
         <span>+7</span><input type="tel" name="tel"  id="phone" pattern="^((8|\+7)[\- ]?)?[\-]?)?[\d\- ]{7,10}$" class="input telplace" placeholder="Введите номер без +7">
       </p>
 
       <p>
-        <label class="label" for="email">Ваш email</label>
+        <label class="label">Ваш email</label>
         <input class="input" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="email" placeholder="Введите ваш email" required/>
       </p>
       <p>
-        <label class="label" for="message">Текст сообщения:</label>
+        <label class="label">Текст сообщения:</label>
         <textarea class="input textarea" name="message" rows="15"></textarea>
       </p>
       <input type="submit" value="Отправить">
