@@ -12,11 +12,11 @@ function getConnection() {
 
 function getImage($id) {
     $defaultImage = 'default.jpg';
-    $path = '/upload/mk/';
+    $path = 'upload/mk/';
 
     $pathToImage = $path.$id.'.jpg';
 
-    if (file_exists($_SERVER['DOCUMENT_ROOT'].$pathToImage)) {
+    if (file_exists($_SERVER['DOCUMENT_ROOT'].'/'.$pathToImage)) {
         return $pathToImage;
     }
 
@@ -36,11 +36,11 @@ function getActualEvents()
         $eventList[$i]['name'] = $row['master_name'];
         $eventList[$i]['description'] = $row['description'];
         $eventList[$i]['date'] = $row['date'];
-        $eventList[$i]['coast'] = $row['coast'];
+        $eventList[$i]['coast'] = $row['coast'].' р.';
         $i++;
     }
 
     return $eventList;
 }
 
-return json_encode(getActualEvents());
+echo json_encode(getActualEvents());
