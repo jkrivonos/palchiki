@@ -14,7 +14,10 @@
     color: black;
     height: 100%;
   }
-
+    @keyframes fadeIn{
+      from {opacity:0;}
+      to {opacity:1;}
+    }
   /*вращающиеся круги-меню:*/
   .circleOut:hover {
     transform: rotate(360deg);
@@ -51,6 +54,10 @@
   }
 
   .header {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
     width: 20%;
     /*background-color: #1b9f31;*/
     display: none;
@@ -58,6 +65,7 @@
     top:3%;
     left: 0;
     }
+
   .logo {
     width: 35%;
     /*border: solid 2px black;*/
@@ -133,6 +141,8 @@
 
   .bigPhoto {
     display: flex;
+    /*background-color: #ee72db;*/
+    /*border: solid;*/
   }
 
   a:hover {

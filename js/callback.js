@@ -45,6 +45,6 @@
 
   var sendButtonElement = document.querySelector('.callback input[type=submit]');
 
-  sendButtonElement.addEventListener('click', sendFormHandler);
+  sendButtonElement.addEventListener('submit', sendFormHandler);
 })();
 

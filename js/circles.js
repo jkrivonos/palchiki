@@ -5,7 +5,7 @@
   var COLORS_AFTER = ['white', 'white', 'white', 'white', 'white', 'white'];
   var TEXT_BEFORE = ['Аренда студии', 'Школа лепки', 'Творчество для детей', 'Творчество для взрослых', 'Семейное творчество', 'Праздники'];
   var TEXT_AFTER = ['Проведение встреч, семинаров, мастер-классов', 'Обучение искусству лепки цветов из полимерной глины (от 15 лет)', 'Проводим творческие мастер-классы для детей от 3х лет', 'Обучающие мастер-классы для взрослых по нескольким творческим направления', 'Организуем семейные творческие встречи и занятия "Мама+Я"', 'Организация детских и семейных праздников'];
-  var LINKS = ['', '', '', '', '', 'parties.html'];
+  var LINKS = ['empty.html', 'empty.html', 'empty.html', 'empty.html', 'empty.html', 'parties.html'];
 
   function cloneCircles() { // клонируем круги меню
     var fragment = document.createDocumentFragment();
@@ -42,9 +42,6 @@
       location.href = LINKS[id];
     }
   }
-
-
-
   var circleTemplate = document.querySelector('#similarCircleTemplate').content; // тег(шаблон), который мы хотим клонировать
   var similarCircleElement = document.querySelector('#similar-circle-list'); // обращаемся к элементу, в котором будут все склонированные копии
   cloneCircles(); // клонируем кружки меню
