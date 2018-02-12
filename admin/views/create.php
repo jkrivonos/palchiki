@@ -21,7 +21,7 @@
         <input type="datetime-local" class="input shortInput" name="date" placeholder="Дата и время МК" value="<?php echo $date ?>" required>
 
         <label  for="name">Стоимость, &#x20BD;</label>
-        <input type="text" class="input shortInput" name="coast" placeholder="Стоимость" value="<?php echo $coast ?>" pattern="[0-9]{1,3}" required>
+        <input type="text" class="input shortInput" name="coast" placeholder="Стоимость" value="<?php echo $coast ?>" pattern="[0-9]{1,4}" required>
 
         <label  for="file">Загрузка фото</label>
         <input type="file" class="input" name="image">
