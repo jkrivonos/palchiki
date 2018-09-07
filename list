@@ -1,0 +1,402 @@
+[
+  {
+    "id": "5b6bf1d6ee1fb346850f093f",
+    "name": "Продукт 765",
+    "picture": "https://picsum.photos/300?image=991",
+    "category": "Стройматериалы",
+    "price": 1575,
+    "rating": "3.12"
+  },
+  {
+    "id": "5b6bf1d65a8ef9bac4eaad0f",
+    "name": "Продукт 208",
+    "picture": "https://picsum.photos/300?image=645",
+    "category": "Техника",
+    "price": 1207,
+    "rating": "1.97"
+  },
+  {
+    "id": "5b6bf1d645e04a1ab2f30bf4",
+    "name": "Продукт 493",
+    "picture": "https://picsum.photos/300?image=241",
+    "category": "Продукты",
+    "price": 7270,
+    "rating": "2.69"
+  },
+  {
+    "id": "5b6bf1d69a1dbe28a44af34f",
+    "name": "Продукт 336",
+    "picture": "https://picsum.photos/300?image=645",
+    "category": "Инструменты",
+    "price": 9503,
+    "rating": "1.86"
+  },
+  {
+    "id": "5b6bf1d659fb7289a95521d5",
+    "name": "Продукт 86",
+    "picture": "https://picsum.photos/300?image=729",
+    "category": "Инструменты",
+    "price": 751,
+    "rating": "4.35"
+  },
+  {
+    "id": "5b6bf1d65f864dd16a7ebbbd",
+    "name": "Продукт 677",
+    "picture": "https://picsum.photos/300?image=515",
+    "category": "Техника",
+    "price": 6847,
+    "rating": "4.63"
+  },
+  {
+    "id": "5b6bf1d6e5f88e822dce5388",
+    "name": "Продукт 828",
+    "picture": "https://picsum.photos/300?image=818",
+    "category": "Инструменты",
+    "price": 127,
+    "rating": "4.83"
+  },
+  {
+    "id": "5b6bf1d6bd8ac7162b2046ed",
+    "name": "Продукт 467",
+    "picture": "https://picsum.photos/300?image=538",
+    "category": "Продукты",
+    "price": 8830,
+    "rating": "3.37"
+  },
+  {
+    "id": "5b6bf1d68be1bde93b05d775",
+    "name": "Продукт 105",
+    "picture": "https://picsum.photos/300?image=69",
+    "category": "Инструменты",
+    "price": 6457,
+    "rating": "2.39"
+  },
+  {
+    "id": "5b6bf1d67df5946d009d69f6",
+    "name": "Продукт 372",
+    "picture": "https://picsum.photos/300?image=583",
+    "category": "Инструменты",
+    "price": 1756,
+    "rating": "3.88"
+  },
+  {
+    "id": "5b6bf1d6531dafef62c35942",
+    "name": "Продукт 402",
+    "picture": "https://picsum.photos/300?image=852",
+    "category": "Продукты",
+    "price": 2326,
+    "rating": "3.37"
+  },
+  {
+    "id": "5b6bf1d66e41290047238f0d",
+    "name": "Продукт 819",
+    "picture": "https://picsum.photos/300?image=1",
+    "category": "Техника",
+    "price": 3736,
+    "rating": "4.02"
+  },
+  {
+    "id": "5b6bf1d67918d0b0ab1d3f47",
+    "name": "Продукт 297",
+    "picture": "https://picsum.photos/300?image=504",
+    "category": "Инструменты",
+    "price": 5696,
+    "rating": "3.01"
+  },
+  {
+    "id": "5b6bf1d63dabb6ef62f6760b",
+    "name": "Продукт 333",
+    "picture": "https://picsum.photos/300?image=645",
+    "category": "Инструменты",
+    "price": 7544,
+    "rating": "4.66"
+  },
+  {
+    "id": "5b6bf1d63c51724d1a9c291b",
+    "name": "Продукт 435",
+    "picture": "https://picsum.photos/300?image=161",
+    "category": "Техника",
+    "price": 5202,
+    "rating": "2.18"
+  },
+  {
+    "id": "5b6bf1d6e1b4cc85330c0bf0",
+    "name": "Продукт 360",
+    "picture": "https://picsum.photos/300?image=645",
+    "category": "Инструменты",
+    "price": 9769,
+    "rating": "4.56"
+  },
+  {
+    "id": "5b6bf1d6fa9d9459f7f13d0a",
+    "name": "Продукт 616",
+    "picture": "https://picsum.photos/300?image=429",
+    "category": "Стройматериалы",
+    "price": 9897,
+    "rating": "0.23"
+  },
+  {
+    "id": "5b6bf1d6195750afe322222f",
+    "name": "Продукт 302",
+    "picture": "https://picsum.photos/300?image=25",
+    "category": "Продукты",
+    "price": 1163,
+    "rating": "0.84"
+  },
+  {
+    "id": "5b6bf1d6769d0664b6d0eb3a",
+    "name": "Продукт 799",
+    "picture": "https://picsum.photos/300?image=948",
+    "category": "Стройматериалы",
+    "price": 3710,
+    "rating": "2.89"
+  },
+  {
+    "id": "5b6bf1d60618d7f3aac461ce",
+    "name": "Продукт 372",
+    "picture": "https://picsum.photos/300?image=101",
+    "category": "Техника",
+    "price": 9462,
+    "rating": "1.93"
+  },
+  {
+    "id": "5b6bf1d6197d633706f9cd14",
+    "name": "Продукт 681",
+    "picture": "https://picsum.photos/300?image=677",
+    "category": "Стройматериалы",
+    "price": 1003,
+    "rating": "4.57"
+  },
+  {
+    "id": "5b6bf1d649dc175beaae1eeb",
+    "name": "Продукт 994",
+    "picture": "https://picsum.photos/300?image=268",
+    "category": "Техника",
+    "price": 2669,
+    "rating": "2.66"
+  },
+  {
+    "id": "5b6bf1d6c374272b5e40a8df",
+    "name": "Продукт 569",
+    "picture": "https://picsum.photos/300?image=160",
+    "category": "Стройматериалы",
+    "price": 5224,
+    "rating": "0.72"
+  },
+  {
+    "id": "5b6bf1d6025cd949e979583c",
+    "name": "Продукт 943",
+    "picture": "https://picsum.photos/300?image=198",
+    "category": "Продукты",
+    "price": 5978,
+    "rating": "1.57"
+  },
+  {
+    "id": "5b6bf1d6dc2592af4c8c704d",
+    "name": "Продукт 200",
+    "picture": "https://picsum.photos/300?image=643",
+    "category": "Стройматериалы",
+    "price": 1460,
+    "rating": "0.28"
+  },
+  {
+    "id": "5b6bf1d6fe111ce8c3e5fc89",
+    "name": "Продукт 641",
+    "picture": "https://picsum.photos/300?image=35",
+    "category": "Инструменты",
+    "price": 3103,
+    "rating": "4.47"
+  },
+  {
+    "id": "5b6bf1d6e63ba99edd532e65",
+    "name": "Продукт 623",
+    "picture": "https://picsum.photos/300?image=623",
+    "category": "Продукты",
+    "price": 5097,
+    "rating": "3.94"
+  },
+  {
+    "id": "5b6bf1d69b2cecc34803780f",
+    "name": "Продукт 607",
+    "picture": "https://picsum.photos/300?image=268",
+    "category": "Техника",
+    "price": 8971,
+    "rating": "2.73"
+  },
+  {
+    "id": "5b6bf1d66852054e3758728a",
+    "name": "Продукт 787",
+    "picture": "https://picsum.photos/300?image=559",
+    "category": "Техника",
+    "price": 779,
+    "rating": "3.22"
+  },
+  {
+    "id": "5b6bf1d6b2a98b932507b6d1",
+    "name": "Продукт 579",
+    "picture": "https://picsum.photos/300?image=78",
+    "category": "Стройматериалы",
+    "price": 2952,
+    "rating": "1.91"
+  },
+  {
+    "id": "5b6bf1d6014c1e8b01135487",
+    "name": "Продукт 937",
+    "picture": "https://picsum.photos/300?image=3",
+    "category": "Инструменты",
+    "price": 5191,
+    "rating": "4.58"
+  },
+  {
+    "id": "5b6bf1d60b02158bea77616a",
+    "name": "Продукт 145",
+    "picture": "https://picsum.photos/300?image=330",
+    "category": "Техника",
+    "price": 1539,
+    "rating": "3.09"
+  },
+  {
+    "id": "5b6bf1d652bff63472f0ecb4",
+    "name": "Продукт 872",
+    "picture": "https://picsum.photos/300?image=233",
+    "category": "Техника",
+    "price": 8234,
+    "rating": "0.81"
+  },
+  {
+    "id": "5b6bf1d61540a10a635fb0ec",
+    "name": "Продукт 449",
+    "picture": "https://picsum.photos/300?image=437",
+    "category": "Техника",
+    "price": 3974,
+    "rating": "2.57"
+  },
+  {
+    "id": "5b6bf1d6832c58e4863fddc8",
+    "name": "Продукт 167",
+    "picture": "https://picsum.photos/300?image=760",
+    "category": "Техника",
+    "price": 1285,
+    "rating": "1.73"
+  },
+  {
+    "id": "5b6bf1d6f8f118f5ce42d444",
+    "name": "Продукт 228",
+    "picture": "https://picsum.photos/300?image=977",
+    "category": "Стройматериалы",
+    "price": 8246,
+    "rating": "3.92"
+  },
+  {
+    "id": "5b6bf1d69de003df7280c9bd",
+    "name": "Продукт 655",
+    "picture": "https://picsum.photos/300?image=152",
+    "category": "Инструменты",
+    "price": 9104,
+    "rating": "0.27"
+  },
+  {
+    "id": "5b6bf1d62095c322d670f43e",
+    "name": "Продукт 903",
+    "picture": "https://picsum.photos/300?image=930",
+    "category": "Техника",
+    "price": 1421,
+    "rating": "1.04"
+  },
+  {
+    "id": "5b6bf1d64a3c6cfd81326308",
+    "name": "Продукт 845",
+    "picture": "https://picsum.photos/300?image=378",
+    "category": "Стройматериалы",
+    "price": 1523,
+    "rating": "0.67"
+  },
+  {
+    "id": "5b6bf1d6c620b1b469d6d487",
+    "name": "Продукт 685",
+    "picture": "https://picsum.photos/300?image=524",
+    "category": "Стройматериалы",
+    "price": 5341,
+    "rating": "4.38"
+  },
+  {
+    "id": "5b6bf1d641dc8ba5a8336212",
+    "name": "Продукт 426",
+    "picture": "https://picsum.photos/300?image=965",
+    "category": "Продукты",
+    "price": 9222,
+    "rating": "3.84"
+  },
+  {
+    "id": "5b6bf1d6a71b3c8f2e293dfb",
+    "name": "Продукт 809",
+    "picture": "https://picsum.photos/300?image=501",
+    "category": "Инструменты",
+    "price": 9339,
+    "rating": "1.51"
+  },
+  {
+    "id": "5b6bf1d64e99d838d975254d",
+    "name": "Продукт 567",
+    "picture": "https://picsum.photos/300?image=17",
+    "category": "Стройматериалы",
+    "price": 5629,
+    "rating": "0.06"
+  },
+  {
+    "id": "5b6bf1d6ec830d764579279f",
+    "name": "Продукт 865",
+    "picture": "https://picsum.photos/300?image=784",
+    "category": "Стройматериалы",
+    "price": 6485,
+    "rating": "0.93"
+  },
+  {
+    "id": "5b6bf1d64e5782c15c751c2d",
+    "name": "Продукт 355",
+    "picture": "https://picsum.photos/300?image=741",
+    "category": "Техника",
+    "price": 5693,
+    "rating": "4.44"
+  },
+  {
+    "id": "5b6bf1d617aa66282751b165",
+    "name": "Продукт 766",
+    "picture": "https://picsum.photos/300?image=1",
+    "category": "Стройматериалы",
+    "price": 5791,
+    "rating": "4.15"
+  },
+  {
+    "id": "5b6bf1d63a8a572a60994058",
+    "name": "Продукт 674",
+    "picture": "https://picsum.photos/300?image=645",
+    "category": "Стройматериалы",
+    "price": 794,
+    "rating": "4.15"
+  },
+  {
+    "id": "5b6bf1d625d4382427596e06",
+    "name": "Продукт 494",
+    "picture": "https://picsum.photos/300?image=218",
+    "category": "Техника",
+    "price": 6548,
+    "rating": "3.56"
+  },
+  {
+    "id": "5b6bf1d60dbdb5eda5db1b3a",
+    "name": "Продукт 430",
+    "picture": "https://picsum.photos/300?image=989",
+    "category": "Продукты",
+    "price": 9413,
+    "rating": "0.03"
+  },
+  {
+    "id": "5b6bf1d66024126b4c930204",
+    "name": "Продукт 23",
+    "picture": "https://picsum.photos/300?image=510",
+    "category": "Техника",
+    "price": 6003,
+    "rating": "1.01"
+  }
+]
