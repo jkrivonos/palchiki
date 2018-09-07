@@ -1,0 +1,66 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
+import axios from 'axios'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+    state: {
+      products: [],
+      cart:[],
+      productsId:[],
+      sum:0,
+      cnt:0,
+      category:[
+        { value: 'Стройматериалы',
+          label: 'Стройматериалы'
+        },
+        { value: 'Продукты',
+          label: 'Продукты'
+        },
+        { value: 'Инструменты',
+          label: 'Инструменты'
+        },
+        { value: 'Техника',
+          label: 'Техника'
+        }
+      ]
+    },
+    mutations:{
+      setProducts(state, products){
+        
+        state.products = products;
+      },
+      add(state, payload){
+        state.cart.unshift(payload.obj);
+        state.productsId.unshift(payload.id);
+        state.sum = state.sum + payload.obj.price;
+        
+      },
+      remove(state,payload){
+        let index = state.productsId.indexOf(payload.id);
+        let indexObj = state.cart.indexOf(payload.obj);
+
+        state.productsId.splice(index,1);
+        state.cart.splice(indexObj,1);
+
+        state.sum = state.sum - payload.obj.price;
+
+      } 
+    },     
+    actions:{
+        getProducts({state, commit}){
+          axios.get('https://10.8.183.252/download/attachments/1008851924/list.json',
+          {
+            headers: {
+              'Content-Type': 'application/json'
+          }
+          }).then(response => {
+            commit('setProducts', response.data)
+          }).catch(error => {
+            console.log('error', error);
+          });
+        }
+    }
+  
+})
