@@ -1,0 +1,200 @@
+cart
+<template>
+	<div class="wrapper">
+		<div class="header">
+			<div>В корзине {{ productsId.length }}</div>
+			<div>Общая стоимость {{ sum }} руб.</div>
+			<router-link to="/">На главную</router-link>
+		</div>
+		<div class="content">
+		<div v-for="el in cart">
+			<div class="wrapper__wrapper-inner">
+				<img :src="el.picture">
+				{{el.name}} </br>
+        {{el.price}} руб.</br>
+        Количество:{{ cnt }}
+        <el-button type="success" @click="removeFromCart({id: el.id, obj: el})">Удалить из корзины</el-button>
+      </div>
+		</div>
+	</div>
+	</div>
+</template>
+
+<script>
+
+import {mapMutations} from 'vuex'
+import {mapState} from 'vuex'
+
+export default{
+	name: 'cart',
+	computed:{
+		cnt(){
+			return{
+			}
+		},
+		...mapState(['cnt','productsId', 'sum', 'cart'])
+		},
+	methods:{
+			 ...mapMutations({
+      removeFromCart:'remove'
+    })
+	}	
+}
+
+</script>
+
+<style scoped>
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.header{
+	display: flex;
+	flex-direction: column;
+}
+.wrapper{
+  margin:auto;
+  width: 1255px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.wrapper__wrapper-inner{
+	display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+</style>
+
+________________________________
+item
+
+<template>
+<div>
+	<div>{{ name }}</div>
+	<!-- <div>{{ el.picture }}</div> -->
+	<!-- <div>Цена</div>
+	<div>Категория</div>
+	<div>Рейтинг</div> -->
+</div>
+
+</template>
+
+<script>
+import Vue from 'vue'
+import Vuex from 'vuex'
+import axios from 'axios'
+
+	export default {
+		name:'item',
+		props:['name'],
+		data(){
+			return{}
+		}
+	}
+</script>
+
+______
+mainPage
+<template>
+<div class="wrapper">    
+  <div class="header">
+      <div>Всего товаров доступно он-лайн: {{ products.length }} 
+      <div>Вы выбрали {{ productsId.length }} товаров</div>
+      <div>Общая стоимость {{ sum }} руб. </div> 
+  </div>         
+      <router-link to="cart">Перейти в корзину</router-link>
+      <el-select v-model="products.category" placeholder="Выбрать категорию товара">
+        <el-option
+          v-for="item in category"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
+  </div> 
+  <div class="content">   
+    <div v-for="product in products">
+      <div class="wrapper__wrapper-inner">
+        <img :src="product.picture">
+          {{product.name}} </br>
+          {{product.price}} руб.</br>
+          {{product.category}}</br>
+          Рейтинг {{product.rating}}</br>
+        <el-button type="success" @click="addToCart({id: product.id, obj: product})">Добавить в корзину</el-button>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+<script>
+import {mapMutations} from 'vuex'
+
+import {mapState} from 'vuex'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import axios from 'axios'
+import { Button, Select } from 'element-ui';
+Vue.use(Vuex);
+Vue.use(Button)
+
+export default {
+  name: 'mainPage',
+  
+  created: function() {
+      this.$store.dispatch('getProducts');     
+  },
+  methods: {
+    ...mapMutations({
+      addToCart:'add'
+    })
+   
+  },
+  computed:{
+    ...mapState(['products', 'category','productsId', 'sum', 'category'])
+  }
+}
+
+</script>
+<style scoped>
+body{
+  display: flex;
+
+}
+.header{
+  display: flex;
+  flex-direction: column;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top:35px;
+}
+.wrapper{
+  margin:auto;
+  width: 1255px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.wrapper__wrapper-inner{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-top:20px;
+}
+.wrapper__wrapper-inner_column{
+  display: flex;
+  flex-direction: column;
+}
+h1, h2 {
+  font-weight: normal;
+}
+</style>
+
+
+
+
+
